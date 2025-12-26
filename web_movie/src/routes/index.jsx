@@ -6,6 +6,13 @@ import ListTheater from "../pages/HomeTemplate/ListTheater";
 import About from "../pages/HomeTemplate/About";
 import Support from "../pages/HomeTemplate/Support";
 import PageNotFound from "../pages/PageNotFound";
+import DetailMovie from "../pages/HomeTemplate/DetailMovie";
+import Login from "../pages/Auth/Login";
+import Register from "../pages/Auth/Register";
+import AdminTemplate from "../pages/AdminTemplate";
+import BookingMana from "../pages/AdminTemplate/Booking"
+import MoviesMana from "../pages/AdminTemplate/Movies"
+import UsersMana from "../pages/AdminTemplate/Users"
 const routes = [
   {
     path: "",
@@ -31,7 +38,37 @@ const routes = [
         path: "support",
         element: Support,
       },
+      {
+        path: "detail-movie/:id",
+        element: DetailMovie,
+      },
     ],
+  },
+   {
+    path: "admin",
+    element: AdminTemplate,
+    nested: [
+      {
+        path: "",
+        element: MoviesMana,
+      },
+      {
+        path: "booking",
+        element: BookingMana,
+      },
+      {
+        path: "users",
+        element: UsersMana,
+      },
+    ],
+  },
+  {
+    path: "login",
+    element: Login,
+  },
+   {
+    path: "register",
+    element: Register,
   },
   {
     path: "*",

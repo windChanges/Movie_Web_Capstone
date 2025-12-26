@@ -9,7 +9,7 @@ const Navbar = () => {
             href="https://flowbite.com/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src="public/img/Logo_Movie.png" className="h-10" alt="Logo" />
+            <img src="../img/Logo_Movie.png" className="h-10" alt="Logo" />
             <span className="self-center text-xl text-heading font-semibold whitespace-nowrap text-white">
               MovieDQ
             </span>
@@ -89,6 +89,16 @@ const Navbar = () => {
                   }
                 >
                   Hỗ trợ
+                </NavLink>
+              </li>
+               <li>
+                <NavLink
+                  to="/login"
+                  className={({ isActive }) =>
+                    isActive ? "text-blue-400" : "text-gray-200 hover:text-white"
+                  }
+                >
+                  Login
                 </NavLink>
               </li>
             </ul>
